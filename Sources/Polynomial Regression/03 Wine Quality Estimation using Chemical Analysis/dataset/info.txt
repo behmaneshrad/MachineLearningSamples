@@ -1,0 +1,40 @@
+
+https://archive.ics.uci.edu/dataset/186/wine+quality
+
+دیتاست Wine Quality شامل اطلاعات شیمیایی و نمره کیفیت (score) دو نوع شراب پرتغالی (قرمز و سفید) است. هدف اصلی، پیش‌بینی کیفیت (اعداد صحیح بین ۰ تا ۱۰) بر اساس ویژگی‌های فیزیکوشیمیایی است.
+
+۱. مقدمه
+دیتاست Wine Quality شامل اطلاعات شیمیایی و نمره کیفیت (score) دو نوع شراب پرتغالی (قرمز و سفید) است. هدف اصلی، پیش‌بینی کیفیت (اعداد صحیح بین ۰ تا ۱۰) بر اساس ویژگی‌های فیزیکوشیمیایی است.
+
+۲. منبع
+نویسندگان اصلی: P. Cortez, A. Cerdeira, F. Almeida, T. Matos, J. Reis
+مقاله مرجع: “Modeling wine preferences by data mining from physicochemical properties”
+لینک UCI: https://archive.ics.uci.edu/dataset/186/wine+quality
+
+۳. ساختار دیتاست
+دو فایل CSV مجزا (semicolon-separated):
+winequality-red.csv → 1599 نمونه
+winequality-white.csv → 4898 نمونه
+هر نمونه دارای 12 ستون: 11 ویژگی ورودی + 1 برچسب کیفیت
+
+4- متغیر هدف (Target)
+quality: نمرهٔ ارزیابی کیفی شراب توسط متخصصان (scale 0–10).
+قابل استفاده هم برای رگرسیون (پیش‌بینی عدد دقیق) و هم برای دسته‌بندی (مثلاً quality ≥7 → “خوب” و <7 → “معمولی/ضعیف”).
+5-موارد کاربرد آموزشی
+مقایسه مدل‌های رگرسیونی (Linear, Ridge, Lasso)
+تبدیل رگرسیون به دسته‌بندی (حد آستانه برای quality)
+تحلیل اهمیت ویژگی‌ها (Feature Importance) و تفسیر فیزیکوشیمیایی ضرایب
+بررسی توزیع نمره کیفیت (unbalanced classes) در حالت دسته‌بندی
+
+fixed acidity  float  اسید ثابت (متشکل از اسیدهای کربوکسیلیک)  g(tartaric acid)/dm³
+volatile acidity  float  اسید فرار (استیک)  g(acetic acid)/dm³
+citric acid  float  اسید سیتریک  g/dm³
+residual sugar  float  قند باقیمانده  g/dm³
+chlorides  float  کلریدها  g(sodium chloride)/dm³
+free sulfur dioxide  float  SO₂ آزاد  mg/dm³
+total sulfur dioxide  float  مجموع SO₂  mg/dm³
+density  float  چگالی  g/cm³
+pH  float  درجه اسیدیته  —
+sulphates  float  سولفات‌ها (به عنوان نگهدارنده)  g(potassium sulphate)/dm³
+alcohol  float  درصد الکل حجمی  % vol.
+quality  int  نمره کیفی (هدف)  ۰ تا ۱۰

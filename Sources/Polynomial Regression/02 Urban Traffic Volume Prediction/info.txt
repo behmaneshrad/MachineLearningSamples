@@ -1,0 +1,19 @@
+پیش‌بینی تراکم ترافیک (Urban Traffic Volume Prediction)
+حوزه: شهرسازی و حمل‌ونقل
+دیتاست: Metro Interstate Traffic Volume Dataset  (پیش‌بینی traffic_volume با متغیرهای آب‌وهوایی، روزهای کاری، فصول سال)
+
+چالش آموزشی:
+استفاده از feature engineering برای تبدیل تاریخ به ویژگی‌های معنادار
+مدیریت مقادیر پرت (outliers) در داده‌های ترافیکی
+اعمال regularization برای جلوگیری از برازش بیش از حد (overfitting)
+
+دیتاست مورد نظر تو تاپیک دیتاست قرار داده شد
+https://t.me/c/2893824788/197/1766
+#practice #liner_regression
+
+پیش‌پردازش معمولی:
+تبدیل date_time به نوع datetime و استخراج ویژگی‌های زمانی (hour, weekday, month)
+تبدیل temp به درجه سلسیوس (°C = K − 273.15)
+کدگذاری ستون‌های متنی (holiday, weather_main, weather_description)
+پر کردن یا حذف مقادیر گمشده (اگر وجود داشته باشد)
+ساخت ویژگی‌های ترکیبی (مثلاً interaction بین بارش و ابر)

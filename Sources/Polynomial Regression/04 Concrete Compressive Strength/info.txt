@@ -1,0 +1,12 @@
+4-پیش‌بینی مقاومت فشاری بتن (Concrete Compressive Strength)
+حوزه: مهندسی عمران و مصالح ساختمانی
+دیتاست:“Concrete Compressive Strength Data Set”منبع: UCI Machine Learning Repository
+توضیح: مقاومت فشاری بتن (MPa) را بر اساس مقادیر سیمان، آب، سنگدانه‌ها، نسبت آب به سیمان و… پیش‌بینی کنید.
+
+چالش چندجمله‌ای:
+روابط غیرخطی شدید بین غلظت اجزاء و مقاومت – نیاز به انتخاب درجه مناسب (پلی‌نومیال درجه ۲ یا ۳)
+پایش overfitting با cross-validation و / یا regularization (Ridge/Lasso) پس از Expansion
+
+دیتاست مورد نظر تو تاپیک دیتاست قرار داده شد
+https://t.me/c/2893824788/197/1790
+#practice @polynomial_regression

@@ -1,0 +1,30 @@
+۱. معرفی و منبع
+عنوان: Airfoil Self-Noise Data Set
+منبع: UCI Machine Learning Repository
+لینک صفحه دیتاست:https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
+توضیح کلی:این مجموعه شامل اندازه‌گیری‌های سطح صوت (dB) تولیدشده توسط یک تیغه ملخ (airfoil) تحت شرایط مختلف جریان است. مقادیر از تست‌های تونل باد ناسا به‌دست آمده است.
+۲. ساختار و ابعاد
+تعداد نمونه‌ها: 1503
+تعداد ستون‌ها: 6 (بدون سطر header ترکیبی)
+فرمت: متن ساده با جداکننده فاصله ( یا \s+)
+۳. ویژگی‌ها (Features)
+ستون  نوع داده  واحد  توضیح
+frequency  float  هرتز (Hz)  فرکانس سنجش صدا
+angle_attack  float  درجه (°)  زاویه حمل (angle of attack) روی تیغه ملخ
+chord_length  float  متر (m)  طول آئرودینامیکی تیغه (chord)
+velocity  float  متر بر ثانیه (m/s)  سرعت جریان آزاد (free-stream velocity)
+displacement_thickness  float  متر (m)  ضخامتی از ناحیه کنار جداره (suction-side displacement thickness)
+sound_level  float  دسی‌بل (dB)  سطح صدای ثبت‌شده (target; scaled sound pressure level)
+نکته: برخی منابع طول chord و ضخامت displacement را ابتدا در واحد فوت یا اینچ گزارش کرده و سپس به متر تبدیل کرده‌اند.
+
+ نکات پیش‌پردازش و آموزشی
+استانداردسازی (Scaling):
+به‌دلیل مقیاس‌های متفاوت (Hz vs. m vs. m/s vs. dB) بهتر است قبل از مدل‌سازی با StandardScaler یا MinMaxScaler مقیاس دهید.
+روابط غیرخطی و تعامل (Polynomial / Interaction):
+صدا تحت تأثیر ترکیب چندگانه فرکانس، زاویه و سرعت است؛ استفاده از ترم‌های چندجمله‌ای (PolynomialFeatures) و ترم‌های تعامل (interaction) می‌تواند به بهبود دقت کمک کند.
+تقسیم داده (Train/Test Split) و اعتبارسنجی (Cross-Validation):
+برای جلوگیری از overfitting، از K-fold CV یا hold-out set استفاده کنید.
+انتخاب مدل:
+علاوه بر رگرسیون پلی‌نومیال، می‌توان به SVR با کرنل RBF یا درخت‌های تصمیم (Random Forest) نیز به‌عنوان baseline نگاه کرد و مقایسه کرد.
+ارزیابی مدل:
+معیارهای MAE، MSE و R² را برای سنجش عملکرد مدل به‌کار ببرید.

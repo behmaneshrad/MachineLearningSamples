@@ -1,0 +1,13 @@
+مدل‌سازی سطح صدا در ملخ هواپیما (Airfoil Self-Noise)
+حوزه: مهندسی هوافضا و آکوستیک
+دیتاست:“Airfoil Self-Noise Data Set”منبع: UCI Machine Learning Repository
+توضیح: سطح شدت صدای ایجادشده توسط ملخ (dB) را از ویژگی‌هایی همچون فرکانس، زاویه حمل (angle of attack)، سرعت جریان و… پیش‌بینی کنید.
+
+چالش چندجمله‌ای:
+رابطهٔ پیچیدهٔ موج‌های صوتی با فرکانس و زاویه – استفاده از ترم‌های چندجمله‌ای متقاطع (interaction)
+نکات استانداردسازی (feature scaling) پیش از اعمال PolynomialFeatures
+
+
+دیتاست مورد نظر تو تاپیک دیتاست قرار داده شد
+https://t.me/c/2893824788/197/1792
+#practice @polynomial_regression
